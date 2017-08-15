@@ -1,0 +1,124 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android1="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#D9D9D9" >
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/nav_bg"
+        android:gravity="center"
+        android:src="@drawable/paxlogo" />
+
+    <TextView
+        android1:id="@+id/commTypeLabel"
+        android1:layout_width="wrap_content"
+        android1:layout_height="wrap_content"
+        android1:layout_alignParentLeft="true"
+        android1:layout_below="@+id/logo"
+        android1:text="commType"
+        android1:textStyle="bold" />
+
+    <TextView
+        android1:id="@+id/serverIpLabel"
+        android1:layout_width="wrap_content"
+        android1:layout_height="wrap_content"
+        android1:layout_alignParentLeft="true"
+        android1:layout_below="@+id/commTypeRadioGroup"
+        android1:text="serverAddr"
+        android1:textStyle="bold" />
+
+    <EditText
+        android1:id="@+id/serverIpText"
+        android1:layout_width="wrap_content"
+        android1:layout_height="wrap_content"
+        android1:layout_alignLeft="@+id/commTypeRadioGroup"
+        android1:layout_below="@+id/serverIpLabel"
+        android1:ems="10" />
+
+    <TextView
+        android1:id="@+id/serverPortLabel"
+        android1:layout_width="wrap_content"
+        android1:layout_height="wrap_content"
+        android1:layout_alignParentLeft="true"
+        android1:layout_below="@+id/serverIpText"
+        android1:text="serverPort"
+        android1:textStyle="bold" />
+
+    <EditText
+        android1:id="@+id/serverPortText"
+        android1:layout_width="wrap_content"
+        android1:layout_height="wrap_content"
+        android1:layout_alignLeft="@+id/serverIpText"
+        android1:layout_alignRight="@+id/serverIpText"
+        android1:layout_below="@+id/serverPortLabel"
+        android1:ems="10"
+        android1:inputType="number" />
+
+    <TextView
+        android1:id="@+id/btMacLabel"
+        android1:layout_width="wrap_content"
+        android1:layout_height="wrap_content"
+        android1:layout_alignParentLeft="true"
+        android1:layout_below="@+id/serverPortText"
+        android1:text="bluetoothMac"
+        android1:textStyle="bold" />
+
+    <Spinner
+        android1:id="@+id/btMacSpinner"
+        android1:layout_width="wrap_content"
+        android1:layout_height="wrap_content"
+        android1:layout_alignLeft="@+id/serverPortText"
+        android1:layout_alignRight="@+id/serverPortText"
+        android1:layout_below="@+id/btMacLabel" />
+
+    <Button
+        android1:id="@+id/resetBtn"
+        android1:layout_width="80dp"
+        android1:layout_height="wrap_content"
+        android1:layout_alignParentBottom="true"
+        android1:layout_marginLeft="51dp"
+        android1:layout_toRightOf="@+id/btMacLabel"
+        android1:text="Reload" />
+
+    <RadioGroup
+        android1:id="@+id/commTypeRadioGroup"
+        android1:layout_width="wrap_content"
+        android1:layout_height="wrap_content"
+        android1:layout_alignParentLeft="true"
+        android1:layout_below="@+id/commTypeLabel"
+        android1:layout_marginLeft="20dp" >
+
+        <RadioButton
+            android1:id="@+id/radioWifi"
+            android1:layout_width="wrap_content"
+            android1:layout_height="wrap_content"
+            android1:text="ip" />
+
+        <RadioButton
+            android1:id="@+id/radioBluetooth"
+            android1:layout_width="wrap_content"
+            android1:layout_height="wrap_content"
+            android1:checked="true"
+            android1:text="bluetooth" />
+    </RadioGroup>
+
+    <Button
+        android1:id="@+id/btScanBtn"
+        android1:layout_width="wrap_content"
+        android1:layout_height="wrap_content"
+        android1:layout_alignBottom="@+id/btMacSpinner"
+        android1:layout_toRightOf="@+id/btMacSpinner"
+        android1:text="Scan" />
+
+    <Button
+        android1:id="@+id/saveBtn"
+        android1:layout_width="80dp"
+        android1:layout_height="wrap_content"
+        android1:layout_alignParentBottom="true"
+        android1:layout_toRightOf="@+id/resetBtn"
+        android1:text="Save" />
+
+</RelativeLayout>

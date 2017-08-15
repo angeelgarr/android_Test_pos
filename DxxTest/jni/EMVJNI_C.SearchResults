@@ -1,0 +1,68 @@
+---- ucInitFlag Matches (17 in 2 files) ----
+Fileoper.c:	glEMV_Param.ucInitFlag = 1;
+Fileoper.c:	/*if( 0 == glEMV_Param.ucInitFlag )
+Fileoper.c:		glEMV_Param.ucInitFlag = 0;	// re-init
+Fileoper.c:	/*if( 0 == glEMV_Param.ucInitFlag )
+Fileoper.c:		glEMV_Param.ucInitFlag = 0;
+Fileoper.c:	/*if( 0 == glEMV_Param.ucInitFlag )
+Fileoper.c:		glEMV_Param.ucInitFlag = 0;
+Fileoper.c:	/*if( 0 == glEMV_Param.ucInitFlag )
+Fileoper.c:	/*if( 0 == glEMV_Param.ucInitFlag )
+Fileoper.c:	/*if( 0 == glEMV_Param.ucInitFlag )
+Fileoper.c:	/*if( 0 == glEMV_Param.ucInitFlag )
+Fileoper.c:	/*if( 0 == glEMV_Param.ucInitFlag )
+Fileoper.c:	/*if( 0 == glEMV_Param.ucInitFlag )
+Fileoper.c:		glEMV_Param.ucInitFlag = 0;
+Fileoper.c:	/*if( 0 == glEMV_Param.ucInitFlag )
+Fileoper.c:		glEMV_Param.ucInitFlag = 0;
+Global.h:	unsigned char	ucInitFlag;		// 0-struct not initialized, 1-struct initialized
+---- EMV_APPLIST Matches (28 in 6 files) ----
+Com_pax_jni_emvparam.c: * Signature: (Lcom/pax/emv/EMV_APPLIST;)I
+Com_pax_jni_emvparam.c:	EMV_APPLIST stEMVAppList;
+Com_pax_jni_emvparam.c:	memset(&stEMVAppList, 0, sizeof(EMV_APPLIST));
+Com_pax_jni_emvparam.c:	EMV_APPLIST stEMVAppList;
+Com_pax_jni_emvparam.c:	memset(&stEMVAppList, 0, sizeof(EMV_APPLIST));
+Com_pax_jni_emvparam.h: * Signature: (Lcom/pax/emv/EMV_APPLIST;)I
+Com_pax_jni_emvparam.h: * Signature: (ILcom/pax/emv/EMV_APPLIST;)I
+Emvlib.h:}EMV_APPLIST;
+Fileoper.c:		if(uiLen > sizeof(EMV_APPLIST)
+Fileoper.c:			uiLen=sizeof(EMV_APPLIST);
+Fileoper.c:			iWriteBytes = fwrite((EMV_APPLIST *)pData,sizeof(EMV_APPLIST),1,fp);
+Fileoper.c:int EMVAddAIDParameter(EMV_APPLIST stEMVAppList)
+Fileoper.c:	BuildTLVString((unsigned char)TAG_EMV_APP, (unsigned char *)&stEMVAppList, sizeof(EMV_APPLIST), (unsigned char **)&ucTLVStr, &uiTLVLen);
+Fileoper.c:		lngOffset += glEMV_Param.iAppNum * MPOS_EMV_TL_LEN + glEMV_Param.iAppNum * sizeof(EMV_APPLIST) + 1;;
+Fileoper.c:		lngOffset += iIdx * MPOS_EMV_TL_LEN + iIdx * sizeof(EMV_APPLIST) ;
+Fileoper.c:		lngOffset += (glEMV_Param.iAppNum + glEMV_Param.iCAPKNum ) * MPOS_EMV_TL_LEN + glEMV_Param.iAppNum * sizeof(EMV_APPLIST) + glEMV_Param.iCAPKNum * sizeof(EMV_CAPK) + 1;
+Fileoper.c:		lngOffset += (glEMV_Param.iAppNum + iIdx ) * MPOS_EMV_TL_LEN  + glEMV_Param.iAppNum * sizeof(EMV_APPLIST) + iIdx * sizeof(EMV_CAPK) ;
+Fileoper.c:	lngOffset += (glEMV_Param.iAppNum + glEMV_Param.iCAPKNum ) * MPOS_EMV_TL_LEN + glEMV_Param.iAppNum * sizeof(EMV_APPLIST) + glEMV_Param.iCAPKNum * sizeof(EMV_CAPK);
+Fileoper.c:int EMVGetAIDParameter(int iAIDNo, EMV_APPLIST *stEMVAppList)
+Fileoper.c:	memcpy(stEMVAppList, &glEMV_Param.stEMVAppList[iAIDNo], sizeof(EMV_APPLIST));
+Fileoper.c:	lngOffStart += iAIDNo * MPOS_EMV_TL_LEN + iAIDNo * sizeof(EMV_APPLIST);
+Fileoper.c:	lngOffEnd += (iAIDNo + 1) * MPOS_EMV_TL_LEN + (iAIDNo + 1) * sizeof(EMV_APPLIST);
+Fileoper.c:	lngOffStart += (glEMV_Param.iAppNum + iCAPKNo ) * MPOS_EMV_TL_LEN + glEMV_Param.iAppNum * sizeof(EMV_APPLIST) + iCAPKNo * sizeof(EMV_CAPK);
+Fileoper.c:	lngOffEnd += (glEMV_Param.iAppNum + iCAPKNo + 1 ) * MPOS_EMV_TL_LEN + glEMV_Param.iAppNum * sizeof(EMV_APPLIST) + (iCAPKNo + 1) * sizeof(EMV_CAPK);
+Fileoper.h:int EMVAddAIDParameter(EMV_APPLIST stEMVAppList);
+Fileoper.h:int EMVGetAIDParameter(int iAIDNo, EMV_APPLIST *stEMVAppList);
+Global.h:	EMV_APPLIST		stEMVAppList[EMV_APP_MAX_NUM];
+---- ucSkipTLV Matches (14 in 2 files) ----
+Fileoper.c:	glEMV_Param.ucSkipTLV[0] = 0x10;
+Fileoper.c:	glEMV_Param.ucSkipTLV[1] = 0x00;;
+Fileoper.c:	iStartBytes = sizeof(glEMV_Param.ucSkipTLV);
+Fileoper.c:			memcpy(&glEMV_Param.ucSkipTLV, ucVal, uiLen);
+Fileoper.c:	lngOffset = sizeof(glEMV_Param.ucSkipTLV);
+Fileoper.c:	lngOffset = sizeof(glEMV_Param.ucSkipTLV);
+Fileoper.c:	lngOffset = sizeof(glEMV_Param.ucSkipTLV);;
+Fileoper.c:	long	lngOffStart = sizeof(glEMV_Param.ucSkipTLV);
+Fileoper.c:	long	lngOffEnd = sizeof(glEMV_Param.ucSkipTLV);
+Fileoper.c:	lngOffStart = sizeof(glEMV_Param.ucSkipTLV);
+Fileoper.c:	lngOffEnd = sizeof(glEMV_Param.ucSkipTLV);
+Fileoper.c:	lngOffStart = sizeof(glEMV_Param.ucSkipTLV);
+Fileoper.c:	lngOffEnd = sizeof(glEMV_Param.ucSkipTLV);
+Global.h:	unsigned char	ucSkipTLV[2];
+---- TAG_EMV_CLEAR Matches (3 in 2 files) ----
+Fileoper.c:		case TAG_EMV_CLEAR:
+Fileoper.c: 		iRet = AddDataToFile(fp, TAG_EMV_CLEAR, NULL);
+Global.h:#define TAG_EMV_CLEAR		0x10
+---- AddDataToFile Matches (2 in 1 files) ----
+Fileoper.c:int AddDataToFile(FILE *fp,unsigned char ucTag, void * pData)
+Fileoper.c: 		iRet = AddDataToFile(fp, TAG_EMV_CLEAR, NULL);

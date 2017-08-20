@@ -9,6 +9,7 @@ import java.io.RandomAccessFile;
 import org.apache.http.util.EncodingUtils;
 
 import android.text.TextUtils;
+//public void test
 
 public class AppendToFile {
     /**
